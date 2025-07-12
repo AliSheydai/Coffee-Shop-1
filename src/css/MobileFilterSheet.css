@@ -1,0 +1,12 @@
+.mobile-filter {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-filter.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}

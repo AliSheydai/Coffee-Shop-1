@@ -1,0 +1,18 @@
+.hero {
+    background: url('https://i.postimg.cc/3xs7ScB9/00c87b2607a8d8100fbd1f953ff9256e.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.collection-bg {
+    background-image: url('https://i.postimg.cc/fR3byXyt/47e0f714dc12cbab50ab0bc3169bada3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

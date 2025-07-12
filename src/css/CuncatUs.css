@@ -1,0 +1,69 @@
+.coffee-bg {
+    background-image: url('https://i.postimg.cc/DwpDBjr0/8650a2e29ec10a92a53af08f6928ec4a.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.coffee-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(58, 50, 38, 0.7);
+}
+
+.contact-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-input {
+    border-bottom: 2px solid #d1c7b7;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-bottom-color: #8b6b4a;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: #8b6b4a;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #6d5339;
+    transform: translateY(-2px);
+}
+
+.map-container {
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.hours-item {
+    border-bottom: 1px dashed #d1c7b7;
+    padding: 8px 0;
+}
+
+.hours-item:last-child {
+    border-bottom: none;
+}

@@ -1,0 +1,11 @@
+.shop-box {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform .3s ease-in-out,
+                opacity .3s ease-in-out;
+}
+
+.shop-box.open {
+    transform: translateX(0);
+    opacity: 1;
+}
