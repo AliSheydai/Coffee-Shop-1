@@ -1,5 +1,5 @@
 .hero {
-    background: url('https://i.postimg.cc/3xs7ScB9/00c87b2607a8d8100fbd1f953ff9256e.jpg');
+    background: url('https://res.cloudinary.com/dh5meukg5/image/upload/v1753793441/00c87b2607a8d8100fbd1f953ff9256e_ap9dag.jpg');
     background-size: cover;
     background-position: center;
     min-height: 60vh;
@@ -11,7 +11,7 @@
 }
 
 .collection-bg {
-    background-image: url('https://i.postimg.cc/fR3byXyt/47e0f714dc12cbab50ab0bc3169bada3.jpg');
+    background-image: url('https://res.cloudinary.com/dh5meukg5/image/upload/v1753793448/47e0f714dc12cbab50ab0bc3169bada3_e9gpva.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

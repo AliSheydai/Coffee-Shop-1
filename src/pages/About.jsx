@@ -37,7 +37,7 @@ function About() {
             <div className="relative md:w-1/2">
               <div className="overflow-hidden shadow-lg rounded-xl">
                 <img 
-                  src="https://i.postimg.cc/LXqbc981/93af1b727abb3b2bf11dbe5f89ce267f.jpg" 
+                  src="https://res.cloudinary.com/dh5meukg5/image/upload/v1753793440/93af1b727abb3b2bf11dbe5f89ce267f_dmftez.jpg" 
                   className="w-full h-full object-cover"
                 />
               </div>
