@@ -1,8 +1,11 @@
 import { UseHeaderContext } from "../contexts/HeaderContext"
+import { AuthContext } from "../contexts/AuthContext"
 import { Link } from "react-router-dom"
 import MobileMenu from "./MobileMenu"
 import ProductCardList from "./ProductCardList"
 import "../css/MobileMenu.css"
+import { FaSignInAlt, FaUser } from 'react-icons/fa'
+import { useContext } from "react"
 
 function Header() {
 
@@ -17,6 +20,12 @@ function Header() {
         isLoading,
         showResults
     } = UseHeaderContext()
+
+    const { state, dispatch} = useContext(AuthContext)
+
+    const handleLogout = () => {
+        dispatch({type: "LOGOUT"})
+    }
 
     return (
         <header className="bg-white fixed top-0 right-0 shadow-sm z-50 w-full">
@@ -56,17 +65,39 @@ function Header() {
                         />
                         <i className="fas fa-search absolute right-3 text-gray-400 text-sm"></i>
                     </form>
-                    <Link
-                        className="relative flex items-center justify-center hover:text-amber-700 cursor-pointer text-xl hover:scale-110 transition-all transform"
-                        to="/cart"
-                    >
-                        <i className="fas fa-shopping-cart"></i>
-                        {cartCount > 0 && (
-                            <span className="absolute -top-3 -right-3 bg-amber-700 text-white rounded-full text-xs w-5 h-5 flex justify-center items-center">
-                                {cartCount}
-                            </span>
+                    <div className="flex gap-4 items-center">
+                        <Link
+                            className="relative flex items-center justify-center hover:text-amber-700 cursor-pointer text-xl hover:scale-110 transition-all transform"
+                            to="/cart"
+                        >
+                            <i className="fas fa-shopping-cart"></i>
+                            {cartCount > 0 && (
+                                <span className="absolute -top-3 -right-3 bg-amber-700 text-white rounded-full text-xs w-5 h-5 flex justify-center items-center">
+                                    {cartCount}
+                                </span>
+                            )}
+                        </Link>
+
+                        {state.isAuthenticated ? (
+                            <div className="flex justify-center items-center gap-2 flex-row-reverse">
+                                <p className="font-medium text-amber-700">خوش آمدی {state.user.name}</p>
+                                <button 
+                                    onClick={handleLogout}
+                                    className="relative flex items-center justify-center hover:text-amber-700 cursor-pointer text-lg hover:scale-110 transition-all transform"
+                                >
+                                    <FaSignInAlt />
+                                </button>
+                            </div>
+                        )
+                        : (
+                            <Link  
+                                to="login/"
+                                className="relative flex items-center justify-center hover:text-amber-700 cursor-pointer text-xl hover:scale-110 transition-all transform"
+                                >
+                                <FaUser />
+                            </Link>
                         )}
-                    </Link>
+                    </div>
                 </div>
             </div>
 

@@ -72,6 +72,7 @@ function MobileMenu() {
                     <li className="border-b border-gray-300 py-2 pr-1"><Link to="/cuncat-us" onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-800 font-bold hover:text-amber-700">تماس با ما</Link></li>
                 </ul>
             </nav>
+            <p>asdfasdf</p>
         </div>
     )
 }
